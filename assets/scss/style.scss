@@ -1,0 +1,117 @@
+@import './mixin/mixin';
+@import './variable/variable';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    letter-spacing: 0;
+
+    a{
+        text-decoration: none;
+    }
+    li{
+        list-style: none;
+    }
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    padding: 0px 32px;
+    margin: 0 auto;
+}
+
+
+// <!----------------- NAVBAR --------------->
+nav{
+    width: 100%;
+    padding-bottom: 30px;
+    border: 1px solid $border;
+    position: fixed;
+    color: white;
+    border-right: none;
+    .nav-center{
+        width: 100%;
+        padding-top: 30px;
+        @include display(space-between , center);
+        .first{
+            h2{
+                font-size: 32px;
+                span{
+                    font-size: 40px;
+                    color: $yellow;
+                }
+            }
+        }
+        .second{
+            ul{
+                @include display;
+                gap: 15px;
+                font-size: 18px;
+                #home{
+                    color: $yellow;
+                }
+                li a{
+                    color: white;
+                    font-weight: 600;
+                    &:hover{
+                        color: $yellow;
+                        transition: all 0.5s ease;
+                    }
+                }
+            }
+        }
+        .third{
+            @include display;
+            gap: 5px;
+            font-weight: 700;
+            span{
+                color: $yellow;
+            }
+        }
+        #menu{
+            font-size: 40px;
+            font-weight: 900;
+            display: none;
+            color: white;
+            cursor: pointer;
+        }
+        // .toggle-menu{
+        //     display: block;
+        // }
+
+    }
+
+}
+
+// <!----------------- BANNER --------------->
+#banner{
+    width: 100%;
+    padding: 200px 0px;
+    background-image: url(../img/slider-1.jpg);
+}
+
+
+
+
+// <!----------------- Responsive --------------->
+@media screen and (max-width: 992px) {
+    nav .nav-center {
+        .third{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav .nav-center {
+        .second{
+            display: none;
+        }
+        #menu{
+            display: block;
+        }
+    }
+}
