@@ -1,97 +1,187 @@
 @import './mixin/mixin';
 @import './variable/variable';
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
     letter-spacing: 0;
 
-    a{
+    a {
         text-decoration: none;
     }
-    li{
+
+    li {
         list-style: none;
     }
 }
 
-.container{
+.container {
     width: 100%;
     max-width: 1200px;
     padding: 0px 32px;
     margin: 0 auto;
 }
 
-
+.yellow{
+    color: $yellow !important;
+}
+.hoverYellow{
+&:hover{
+    color: $yellow !important;
+    transition:  all 0.5s ease;
+}
+}
 // <!----------------- NAVBAR --------------->
-nav{
+nav {
     width: 100%;
     padding-bottom: 30px;
-    border: 1px solid $border;
+    border-top: 1px solid $border;
+    border-bottom: 1px solid $border;
     position: fixed;
     color: white;
-    border-right: none;
-    .nav-center{
+
+    .nav-center {
         width: 100%;
         padding-top: 30px;
-        @include display(space-between , center);
-        .first{
-            h2{
+        @include display(space-between, center);
+
+        .first {
+            h2 {
                 font-size: 32px;
-                span{
+
+                span {
                     font-size: 40px;
                     color: $yellow;
                 }
             }
         }
-        .second{
-            ul{
+
+        .second {
+            ul {
                 @include display;
                 gap: 15px;
                 font-size: 18px;
-                #home{
-                    color: $yellow;
-                }
-                li a{
+
+                li a {
                     color: white;
                     font-weight: 600;
-                    &:hover{
+
+                    &:hover {
                         color: $yellow;
                         transition: all 0.5s ease;
                     }
                 }
             }
         }
-        .third{
+
+        .third {
             @include display;
             gap: 5px;
             font-weight: 700;
-            span{
+
+            span {
                 color: $yellow;
             }
         }
-        #menu{
+
+        #menu {
             font-size: 40px;
             font-weight: 900;
             display: none;
             color: white;
             cursor: pointer;
         }
-        // .toggle-menu{
-        //     display: block;
-        // }
+
+        .toggle {
+            display: none;
+        }
 
     }
 
 }
 
 // <!----------------- BANNER --------------->
-#banner{
+#banner {
     width: 100%;
     padding: 200px 0px;
     background-image: url(../img/slider-1.jpg);
 }
+
+// <!----------------- CRUD --------------->
+#ourmenu {
+    width: 100%;
+    padding: 100px 0px;
+    background-image: url(../img/menu-bg.jpg);
+    color: white;
+
+    .ourmenu-center {
+        .top {
+            @include display;
+            flex-direction: column;
+            gap: 20px;
+
+            span {
+                font-size: 80px;
+            }
+
+            h2 {
+                font-size: 30px;
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 200px;
+                    height: 2px;
+                    background-color: $yellow;
+                    top: 50%;
+                    bottom: 50%;
+                    left: -250px;
+                }
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    width: 200px;
+                    height: 2px;
+                    background-color: $yellow;
+                    top: 50%;
+                    bottom: 50%;
+                    right: -250px;
+                }
+            }
+        }
+
+        .menu-tab {
+            width: 100%;
+            @include display;
+            gap: 20px;
+            padding-top: 70px;
+
+            a {
+                color: white;
+                font-size: 17px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -99,7 +189,7 @@ nav{
 // <!----------------- Responsive --------------->
 @media screen and (max-width: 992px) {
     nav .nav-center {
-        .third{
+        .third {
             display: none;
         }
     }
@@ -107,10 +197,11 @@ nav{
 
 @media screen and (max-width: 768px) {
     nav .nav-center {
-        .second{
+        .second {
             display: none;
         }
-        #menu{
+
+        #menu {
             display: block;
         }
     }

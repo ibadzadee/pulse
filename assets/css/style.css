@@ -19,13 +19,22 @@
   margin: 0 auto;
 }
 
+.yellow {
+  color: #ebb716 !important;
+}
+
+.hoverYellow:hover {
+  color: #ebb716 !important;
+  transition: all 0.5s ease;
+}
+
 nav {
   width: 100%;
   padding-bottom: 30px;
-  border: 1px solid #474a53;
+  border-top: 1px solid #474a53;
+  border-bottom: 1px solid #474a53;
   position: fixed;
   color: white;
-  border-right: none;
 }
 nav .nav-center {
   width: 100%;
@@ -47,9 +56,6 @@ nav .nav-center .second ul {
   align-items: center;
   gap: 15px;
   font-size: 18px;
-}
-nav .nav-center .second ul #home {
-  color: #ebb716;
 }
 nav .nav-center .second ul li a {
   color: white;
@@ -76,11 +82,67 @@ nav .nav-center #menu {
   color: white;
   cursor: pointer;
 }
+nav .nav-center .toggle {
+  display: none;
+}
 
 #banner {
   width: 100%;
   padding: 200px 0px;
   background-image: url(../img/slider-1.jpg);
+}
+
+#ourmenu {
+  width: 100%;
+  padding: 100px 0px;
+  background-image: url(../img/menu-bg.jpg);
+  color: white;
+}
+#ourmenu .ourmenu-center .top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+#ourmenu .ourmenu-center .top span {
+  font-size: 80px;
+}
+#ourmenu .ourmenu-center .top h2 {
+  font-size: 30px;
+  position: relative;
+}
+#ourmenu .ourmenu-center .top h2::before {
+  position: absolute;
+  content: "";
+  width: 200px;
+  height: 2px;
+  background-color: #ebb716;
+  top: 50%;
+  bottom: 50%;
+  left: -250px;
+}
+#ourmenu .ourmenu-center .top h2::after {
+  position: absolute;
+  content: "";
+  width: 200px;
+  height: 2px;
+  background-color: #ebb716;
+  top: 50%;
+  bottom: 50%;
+  right: -250px;
+}
+#ourmenu .ourmenu-center .menu-tab {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-top: 70px;
+}
+#ourmenu .ourmenu-center .menu-tab a {
+  color: white;
+  font-size: 17px;
 }
 
 @media screen and (max-width: 992px) {
