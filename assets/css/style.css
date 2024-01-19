@@ -144,6 +144,45 @@ nav .nav-center .toggle {
   color: white;
   font-size: 17px;
 }
+#ourmenu .ourmenu-center .bottom {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  padding-top: 100px;
+  gap: 50px;
+}
+#ourmenu .ourmenu-center .bottom .menu-item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+#ourmenu .ourmenu-center .bottom .menu-item .description {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#ourmenu .ourmenu-center .bottom .menu-item .description p {
+  color: #7e7e7e;
+}
+#ourmenu .ourmenu-center .bottom .menu-item .description .price {
+  position: relative;
+}
+#ourmenu .ourmenu-center .bottom .menu-item .description .price:after {
+  width: 150px;
+  position: absolute;
+  content: "";
+  height: 2px;
+  top: 50%;
+  left: -180px;
+  margin-top: -1px;
+  border-bottom: 2px dotted #7e7e7e;
+}
 
 @media screen and (max-width: 992px) {
   nav .nav-center .third {

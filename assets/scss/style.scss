@@ -24,15 +24,17 @@
     margin: 0 auto;
 }
 
-.yellow{
+.yellow {
     color: $yellow !important;
 }
-.hoverYellow{
-&:hover{
-    color: $yellow !important;
-    transition:  all 0.5s ease;
+
+.hoverYellow {
+    &:hover {
+        color: $yellow !important;
+        transition: all 0.5s ease;
+    }
 }
-}
+
 // <!----------------- NAVBAR --------------->
 nav {
     width: 100%;
@@ -163,6 +165,45 @@ nav {
             a {
                 color: white;
                 font-size: 17px;
+            }
+        }
+
+        .bottom {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            padding-top: 100px;
+            gap: 50px;
+
+            .menu-item {
+                width: 100%;
+                @include display;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 10px;
+
+                .description {
+                    width: 100%;
+                    @include display(space-between, center);
+                    p {
+                        color: $gray;
+                    }
+
+                    .price {
+                        position: relative;
+                        &:after {
+                            width: 150px;
+                            position: absolute;
+                            content: '';
+                            height: 2px;
+                            top: 50%;
+                            left: -180px;
+                            margin-top: -1px;
+                            border-bottom: 2px dotted $gray;
+                        }
+                    }
+                }
             }
         }
     }
