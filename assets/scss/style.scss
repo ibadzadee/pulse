@@ -41,8 +41,11 @@ nav {
     padding-bottom: 30px;
     border-top: 1px solid $border;
     border-bottom: 1px solid $border;
-    position: fixed;
     color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
 
     .nav-center {
         width: 100%;
@@ -109,6 +112,7 @@ nav {
     width: 100%;
     padding: 200px 0px;
     background-image: url(../img/slider-1.jpg);
+    position: relative;
 }
 
 // <!----------------- CRUD --------------->
@@ -172,7 +176,7 @@ nav {
             width: 100%;
             display: grid;
             grid-template-columns: repeat(2, auto);
-            padding-top: 100px;
+            padding-top: 10px;
             gap: 50px;
 
             .menu-item {
@@ -181,24 +185,27 @@ nav {
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: flex-start;
-                gap: 10px;
+                gap: 15px;
 
                 .description {
                     width: 100%;
                     @include display(space-between, center);
                     p {
                         color: $gray;
+                        font-size: 14px;
+                        width: 30%;
+                        font-family: italic;
                     }
 
                     .price {
                         position: relative;
                         &:after {
-                            width: 150px;
+                            width: 200px;
                             position: absolute;
                             content: '';
                             height: 2px;
                             top: 50%;
-                            left: -180px;
+                            left: -230px;
                             margin-top: -1px;
                             border-bottom: 2px dotted $gray;
                         }
@@ -206,11 +213,53 @@ nav {
                 }
             }
         }
+        .search-sort{
+            width: 100%;
+            @include display;
+            padding: 50px;
+            gap: 20px;
+            input ,select{
+                width: 200px;
+                padding:  5px 10px;
+                font-size: 18px;
+            }
+        }
     }
 }
 
-
-
+//---------- ADD HTML ----------
+#form{
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 70px 0px;
+    @include display(flex-start , center);
+    flex-direction: column;
+    gap: 10px;
+    label{
+        @include display(flex-start , flex-start)
+    }
+    input{
+        padding: 5px 10px;
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    border: 5px dashed $gray;
+}
+h1{
+    @include display;
+    margin: 70px 0px 40px 0px;
+}
+#table{
+    width: 100%;
+    margin: auto;
+    // @include display;
+    // flex-direction: column;
+    border: 1px solid black;
+    tr , th , td{
+        border: 1px solid black;
+    }
+}
 
 
 

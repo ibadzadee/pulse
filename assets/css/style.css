@@ -33,8 +33,11 @@ nav {
   padding-bottom: 30px;
   border-top: 1px solid #474a53;
   border-bottom: 1px solid #474a53;
-  position: fixed;
   color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 nav .nav-center {
   width: 100%;
@@ -90,6 +93,7 @@ nav .nav-center .toggle {
   width: 100%;
   padding: 200px 0px;
   background-image: url(../img/slider-1.jpg);
+  position: relative;
 }
 
 #ourmenu {
@@ -148,7 +152,7 @@ nav .nav-center .toggle {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, auto);
-  padding-top: 100px;
+  padding-top: 10px;
   gap: 50px;
 }
 #ourmenu .ourmenu-center .bottom .menu-item {
@@ -159,7 +163,7 @@ nav .nav-center .toggle {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 10px;
+  gap: 15px;
 }
 #ourmenu .ourmenu-center .bottom .menu-item .description {
   width: 100%;
@@ -169,19 +173,74 @@ nav .nav-center .toggle {
 }
 #ourmenu .ourmenu-center .bottom .menu-item .description p {
   color: #7e7e7e;
+  font-size: 14px;
+  width: 30%;
+  font-family: italic;
 }
 #ourmenu .ourmenu-center .bottom .menu-item .description .price {
   position: relative;
 }
 #ourmenu .ourmenu-center .bottom .menu-item .description .price:after {
-  width: 150px;
+  width: 200px;
   position: absolute;
   content: "";
   height: 2px;
   top: 50%;
-  left: -180px;
+  left: -230px;
   margin-top: -1px;
   border-bottom: 2px dotted #7e7e7e;
+}
+#ourmenu .ourmenu-center .search-sort {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 20px;
+}
+#ourmenu .ourmenu-center .search-sort input, #ourmenu .ourmenu-center .search-sort select {
+  width: 200px;
+  padding: 5px 10px;
+  font-size: 18px;
+}
+
+#form {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 70px 0px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  border: 5px dashed #7e7e7e;
+}
+#form label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+#form input {
+  padding: 5px 10px;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 70px 0px 40px 0px;
+}
+
+#table {
+  width: 100%;
+  margin: auto;
+  border: 1px solid black;
+}
+#table tr, #table th, #table td {
+  border: 1px solid black;
 }
 
 @media screen and (max-width: 992px) {

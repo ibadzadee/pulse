@@ -35,7 +35,7 @@
               <li><a class="hoverYellow" href="">Restaurant</a></li>
               <li><a class="hoverYellow" href="">News</a></li>
               <li><a class="hoverYellow" href="">Contact</a></li>
-              <li><a class="hoverYellow" href="">ADD</a></li>
+              <li><a class="hoverYellow" href="./add.html">ADD</a></li>
             </ul>
           </div>
           <div class="third">
@@ -47,11 +47,11 @@
           <div class="toggle">
             <ul>
               <li><a href="./index.html" id="home">Home</a></li>
-              <li><a href="">About Us</a></li>
-              <li><a href="">Restaurant</a></li>
-              <li><a href="">News</a></li>
-              <li><a href="">Contact</a></li>
-              <li><a href="">ADD</a></li>
+              <li><a class="hoverYellow" href="">About Us</a></li>
+              <li><a class="hoverYellow" href="">Restaurant</a></li>
+              <li><a class="hoverYellow" href="">News</a></li>
+              <li><a class="hoverYellow" href="">Contact</a></li>
+              <li><a class="hoverYellow" href="./add.html">ADD</a></li>
             </ul>
           </div>
         </div>
@@ -70,81 +70,30 @@
             <h2>OUR MENU</h2>
           </div>
           <ul class="menu-tab">
-            <li id=""><a href="">Breakfast</a></li>
-            <li><a href="">Brunch</a></li>
-            <li><a href="">Lunch</a></li>
-            <li><a href="">Dinner</a></li>
+            <li id=""><a class="yellow hoverYellow" href="">Breakfast</a></li>
+            <li><a class="hoverYellow" href="">Brunch</a></li>
+            <li><a class="hoverYellow" href="">Lunch</a></li>
+            <li><a class="hoverYellow" href="">Dinner</a></li>
           </ul>
 
-          <div class="bottom">
-
-            <div class="menu-item">
-              <h3>Scrambled Eggs with ham</h3>
-              <div class="description">
-                <p>with wild mushrooms and asparagus</p>
-                <div class="price">$9.00</div>
-              </div>
-            </div>
-
-            <div class="menu-item">
-              <h3>Scrambled Eggs with ham</h3>
-              <div class="description">
-                <p>with wild mushrooms and asparagus</p>
-                <div class="price">$9.00</div>
-              </div>
-            </div>
-
-            <div class="menu-item">
-              <h3>Scrambled Eggs with ham</h3>
-              <div class="description">
-                <p>with wild mushrooms and asparagus</p>
-                <div class="price">$9.00</div>
-              </div>
-            </div>
-
-            <div class="menu-item">
-              <h3>Scrambled Eggs with ham</h3>
-              <div class="description">
-                <p>with wild mushrooms and asparagus</p>
-                <div class="price">$9.00</div>
-              </div>
-            </div>
-
-            <div class="menu-item">
-              <h3>Scrambled Eggs with ham</h3>
-              <div class="description">
-                <p>with wild mushrooms and asparagus</p>
-                <div class="price">$9.00</div>
-              </div>
-            </div>
-
-            <div class="menu-item">
-              <h3>Scrambled Eggs with ham</h3>
-              <div class="description">
-                <p>with wild mushrooms and asparagus</p>
-                <div class="price">$9.00</div>
-              </div>
-            </div>
-
-            <div class="menu-item">
-              <h3>Scrambled Eggs with ham</h3>
-              <div class="description">
-                <p>with wild mushrooms and asparagus</p>
-                <div class="price">$9.00</div>
-              </div>
-            </div>
-
-            <div class="menu-item">
-              <h3>Scrambled Eggs with ham</h3>
-              <div class="description">
-                <p>with wild mushrooms and asparagus</p>
-                <div class="price">$9.00</div>
-              </div>
-            </div>
-
+          <div class="search-sort">
+            <input type="search" name="search" id="search" placeholder="Search...">
+            <select name="sort" id="sort" class="sort">
+              <option value="def">Default</option>
+              <option value="az">A-Z</option>
+              <option value="za">Z-A</option>
+            </select>
           </div>
+
+          <div class="bottom">
+          </div>
+
         </div>
       </div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
