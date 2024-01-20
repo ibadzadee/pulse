@@ -4,49 +4,49 @@
       "id": 1,
       "name": "Scrambled Eggs with ham",
       "description": "with wild mushrooms and asparagus",
-      "cost": "9.00"
+      "cost": 9.00
     },
     {
       "id": 2,
       "name": "Scrambled Eggs with ham",
       "description": "with wild mushrooms and asparagus",
-      "cost": "9.00"
+      "cost": 9.00
     },
     {
       "id": 3,
       "name": "Scrambled Eggs in Puff Pastry",
       "description": "with wild mushrooms and asparagus",
-      "cost": "11.00"
+      "cost": 11.00
     },
     {
       "id": 4,
       "name": "Scrambled Eggs in Puff Pastry",
-      "description": "with wild mushrooms and asparagus",
-      "cost": "11.00"
+      "description": "with wild mushrooms and asparagus", 
+      "cost": 11.00
     },
     {
       "id": 5,
       "name": "Eggs Benedict",
       "description": "with wild mushrooms and asparagus",
-      "cost": "6.00"
+      "cost": 6.00
     },
     {
       "id": 6,
       "name": "Eggs Benedict",
       "description": "with wild mushrooms and asparagus",
-      "cost": "6.00"
+      "cost": 6.00
     },
     {
       "id": 7,
       "name": "Soft-Boiled Organic Egg",
       "description": "with wild mushrooms and asparagus",
-      "cost": "8.00"
+      "cost": 8.00
     },
     {
       "id": 8,
       "name": "Soft-Boiled Organic Egg",
       "description": "with wild mushrooms and asparagus",
-      "cost": "8.00"
+      "cost": 8.00
     }
   ]
 }
